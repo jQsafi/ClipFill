@@ -7,7 +7,7 @@
 **Author:** Shafayat Hossain <shafayat@engineer.com>  
 **Homepage:** https://jqsafi.github.io/ClipFill-Website/  
 **Contact / WhatsApp:** https://wa.me/@jqsafi  
-**Supported Locales:** English (`en`), Spanish (`es`), French (`fr`)  
+**Supported Locales:** English (`en`), Bengali/Bangla (`bn`), Spanish (`es`), French (`fr`)  
 
 ---
 
@@ -30,7 +30,7 @@ ClipFill is a smart clipboard companion and form filling assistant designed to s
 - 🎯 **Target & Fill**: Click any item in your sidebar and point-and-click on any form field on the webpage to insert text instantly.
 - ⚡ **Smart Form Autofill**: Scans page forms and populates inputs (Name, Email, Phone, Address) with 1-click matching.
 - 📌 **Pin & Categorize**: Organize snippets with custom tags (Personal, Form Data, Code, Work) and pin frequently used items to the top.
-- 🌐 **Multilingual Support (i18n)**: Fully internationalized with native locale files (`_locales`) supporting English, Spanish, French, and easily expandable.
+- 🌐 **Multilingual Support (i18n)**: Fully internationalized with native locale files (`_locales`) supporting English, Bangla, Spanish, French, and easily expandable.
 - 🔒 **Privacy Focused**: All clipboard data and saved items are stored strictly locally in your browser (`chrome.storage.local`). Zero remote servers or data tracking.
 
 ---
@@ -40,6 +40,7 @@ ClipFill is a smart clipboard companion and form filling assistant designed to s
 - **Default Locale**: `en` (English)
 - **Locale File Structure**:
   - `_locales/en/messages.json` (English - Primary)
+  - `_locales/bn/messages.json` (Bangla / Bengali)
   - `_locales/es/messages.json` (Spanish)
   - `_locales/fr/messages.json` (French)
 - **Manifest Placeholders**: Uses `__MSG_extension_name__`, `__MSG_extension_description__`, and `__MSG_action_title__` per WebExtension i18n standards.

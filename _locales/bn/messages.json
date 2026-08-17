@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "ClipFill - স্মার্ট ক্লিপবোর্ড ও ফর্ম ফিলার",
+    "description": "The title of the extension in Bengali"
+  },
+  "extension_description": {
+    "message": "মাইক্রোসফট এজ সাইডবার থেকে স্বয়ংক্রিয়ভাবে কপি করা টেক্সট সংগ্রহ করুন, ব্যক্তিগত যোগাযোগের তথ্য পরিচালনা করুন এবং সহজেই ওয়েব ফর্ম পূরণ করুন।",
+    "description": "The description of the extension in Bengali"
+  },
+  "action_title": {
+    "message": "ClipFill সাইডবার খুলুন",
+    "description": "Action icon tooltip text in Bengali"
+  }
+}

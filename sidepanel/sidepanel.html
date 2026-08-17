@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipFill Sidebar</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+            <path d="M9 14l2 2 4-4"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>ClipFill</h1>
+          <span class="version-tag">v1.0</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Auto Capture Toggle -->
+        <label class="toggle-switch" title="Auto-save copied text from web pages">
+          <input type="checkbox" id="auto-capture-toggle" checked>
+          <span class="slider"></span>
+        </label>
+        <!-- Add Snippet Button -->
+        <button id="btn-open-add" class="icon-btn primary" title="Add Custom Snippet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Toolbar / Action Hub -->
+    <section class="toolbar-section">
+      <button id="btn-read-clipboard" class="tool-btn accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        </svg>
+        <span>Paste from Clipboard</span>
+      </button>
+
+      <button id="btn-smart-fill" class="tool-btn secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+        <span>Smart Fill Form</span>
+      </button>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="filter-section">
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search snippets...">
+        <button id="btn-clear-search" class="clear-btn" hidden>&times;</button>
+      </div>
+
+      <div class="category-tabs" id="category-tabs">
+        <button class="tab-btn active" data-cat="ALL">All</button>
+        <button class="tab-btn" data-cat="PINNED">Pinned</button>
+        <button class="tab-btn" data-cat="Personal">Personal</button>
+        <button class="tab-btn" data-cat="Form Data">Form Data</button>
+        <button class="tab-btn" data-cat="General">General</button>
+      </div>
+    </section>
+
+    <!-- Snippets Feed -->
+    <main class="feed-section">
+      <div class="feed-header">
+        <span class="feed-title">Saved Items</span>
+        <span class="count-badge" id="snippet-count">0 items</span>
+      </div>
+
+      <div id="snippets-list" class="snippets-list">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state" hidden>
+        <div class="empty-icon">📋</div>
+        <h3>No Snippets Found</h3>
+        <p>Copy text on web pages or click <strong>+</strong> to add custom items.</p>
+      </div>
+    </main>
+
+    <!-- Add / Edit Modal -->
+    <div id="modal-edit" class="modal-overlay" hidden style="display: none;">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="modal-title">Add New Snippet</h3>
+          <button id="modal-close" class="close-btn">&times;</button>
+        </div>
+        <form id="form-snippet">
+          <input type="hidden" id="edit-id">
+          <div class="form-group">
+            <label for="input-label">Label / Name</label>
+            <input type="text" id="input-label" placeholder="e.g. Work Email, Phone, Address" required>
+          </div>
+          <div class="form-group">
+            <label for="input-category">Category</label>
+            <select id="input-category">
+              <option value="Personal">Personal</option>
+              <option value="Form Data">Form Data</option>
+              <option value="General">General</option>
+              <option value="Code">Code / Links</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="input-text">Content</label>
+            <textarea id="input-text" rows="4" placeholder="Enter snippet text..." required></textarea>
+          </div>
+          <div class="modal-actions">
+            <button type="button" id="btn-cancel-edit" class="btn secondary">Cancel</button>
+            <button type="submit" class="btn primary">Save Snippet</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Smart Form Fill Drawer -->
+    <div id="drawer-smartfill" class="drawer-overlay" hidden style="display: none;">
+      <div class="drawer-card">
+        <div class="drawer-header">
+          <div class="drawer-title">
+            <span class="drawer-icon">⚡</span>
+            <h3>Smart Form Mapper</h3>
+          </div>
+          <button id="drawer-close" class="close-btn">&times;</button>
+        </div>
+        <div class="drawer-body">
+          <p class="drawer-sub">Select which field on the current page to populate:</p>
+          <div id="detected-fields-list" class="detected-fields-list">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+        <div class="drawer-footer" style="margin-top: 10px; display: flex; justify-content: flex-end;">
+          <button id="drawer-footer-close" class="btn secondary" style="width: 100%;">← Back to Saved Items</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="app-toast" class="app-toast" hidden>
+      <span id="toast-message">Action completed</span>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+
+</html>

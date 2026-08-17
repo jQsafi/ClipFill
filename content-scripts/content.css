@@ -1,0 +1,81 @@
+/* Content Script Styles for ClipFill */
+
+.clipfill-target-hover {
+  outline: 3px solid #6366f1 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4) !important;
+  cursor: crosshair !important;
+  transition: outline 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clipfill-banner {
+  position: fixed !important;
+  top: 16px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 2147483647 !important;
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  padding: 10px 18px !important;
+  border-radius: 30px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  animation: clipfill-slide-down 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.clipfill-banner-content {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.clipfill-banner-icon {
+  font-size: 16px !important;
+}
+
+.clipfill-banner-close {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
+  color: #94a3b8 !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.clipfill-banner-close:hover {
+  background: rgba(239, 68, 68, 0.8) !important;
+  color: #ffffff !important;
+}
+
+@keyframes clipfill-slide-down {
+  from {
+    transform: translate(-50%, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes clipfill-pop-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

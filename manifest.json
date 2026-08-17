@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Automatically collect copied text snippets, manage personal contact info (Name, Email, Phone, Address), and easily fill out web forms from a customizable sidebar in Microsoft Edge.",
   "author": "Shafayat Hossain <shafayat@engineer.com>",
-  "homepage_url": "https://jqsafi.github.io",
+  "homepage_url": "https://jqsafi.github.io/ClipFill-Website/",
   "permissions": [
     "storage",
     "sidePanel",

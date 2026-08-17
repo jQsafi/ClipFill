@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "ClipFill - Smart Clipboard & Form Filler",
+    "description": "The title of the extension"
+  },
+  "extension_description": {
+    "message": "Automatically collect copied text snippets, manage personal contact info (Name, Email, Phone, Address), and easily fill out web forms from a customizable sidebar in Microsoft Edge.",
+    "description": "The description of the extension"
+  },
+  "action_title": {
+    "message": "Open ClipFill Sidebar",
+    "description": "Action icon tooltip text"
+  }
+}

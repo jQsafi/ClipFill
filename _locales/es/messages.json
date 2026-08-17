@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "ClipFill - Portapapeles inteligente y rellenador de formularios",
+    "description": "The title of the extension in Spanish"
+  },
+  "extension_description": {
+    "message": "Recopile automáticamente fragmentos de texto copiados, administre datos de contacto personales y complete formularios web fácilmente desde la barra lateral de Microsoft Edge.",
+    "description": "The description of the extension in Spanish"
+  },
+  "action_title": {
+    "message": "Abrir barra lateral de ClipFill",
+    "description": "Action icon tooltip text in Spanish"
+  }
+}

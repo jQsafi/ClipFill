@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "ClipFill - Presse-papiers intelligent et remplisseur de formulaires",
+    "description": "The title of the extension in French"
+  },
+  "extension_description": {
+    "message": "Collectez automatiquement les extraits de texte copiés, gérez les coordonnées personnelles et remplissez facilement les formulaires web à partir de la barre latérale de Microsoft Edge.",
+    "description": "The description of the extension in French"
+  },
+  "action_title": {
+    "message": "Ouvrir la barre latérale ClipFill",
+    "description": "Action icon tooltip text in French"
+  }
+}

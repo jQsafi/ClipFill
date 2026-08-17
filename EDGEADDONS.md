@@ -5,8 +5,9 @@
 **Version:** 1.0.0  
 **Target Browser:** Microsoft Edge (Chromium, Manifest V3)  
 **Author:** Shafayat Hossain <shafayat@engineer.com>  
-**Homepage:** https://jqsafi.github.io  
+**Homepage:** https://jqsafi.github.io/ClipFill-Website/  
 **Contact / WhatsApp:** https://wa.me/@jqsafi  
+**Supported Locales:** English (`en`), Spanish (`es`), French (`fr`)  
 
 ---
 
@@ -29,11 +30,23 @@ ClipFill is a smart clipboard companion and form filling assistant designed to s
 - 🎯 **Target & Fill**: Click any item in your sidebar and point-and-click on any form field on the webpage to insert text instantly.
 - ⚡ **Smart Form Autofill**: Scans page forms and populates inputs (Name, Email, Phone, Address) with 1-click matching.
 - 📌 **Pin & Categorize**: Organize snippets with custom tags (Personal, Form Data, Code, Work) and pin frequently used items to the top.
+- 🌐 **Multilingual Support (i18n)**: Fully internationalized with native locale files (`_locales`) supporting English, Spanish, French, and easily expandable.
 - 🔒 **Privacy Focused**: All clipboard data and saved items are stored strictly locally in your browser (`chrome.storage.local`). Zero remote servers or data tracking.
 
 ---
 
-## 2. Permissions Justification for Microsoft Edge Review
+## 2. Internationalization (i18n) & Multilingual Setup
+
+- **Default Locale**: `en` (English)
+- **Locale File Structure**:
+  - `_locales/en/messages.json` (English - Primary)
+  - `_locales/es/messages.json` (Spanish)
+  - `_locales/fr/messages.json` (French)
+- **Manifest Placeholders**: Uses `__MSG_extension_name__`, `__MSG_extension_description__`, and `__MSG_action_title__` per WebExtension i18n standards.
+
+---
+
+## 3. Permissions Justification for Microsoft Edge Review
 
 | Permission | Reason Required for Microsoft Edge |
 | --- | --- |
@@ -48,7 +61,7 @@ ClipFill is a smart clipboard companion and form filling assistant designed to s
 
 ---
 
-## 3. Privacy Policy & Data Usage
+## 4. Privacy Policy & Data Usage
 
 - **Local Storage Only**: ClipFill does NOT transmit, sell, or communicate clipboard data to any external server, cloud platform, or third party.
 - **Data Collected**: Only text explicitly copied by the user (or manually entered) is stored locally within `chrome.storage.local`.
@@ -56,6 +69,6 @@ ClipFill is a smart clipboard companion and form filling assistant designed to s
 
 ---
 
-## 4. Version History
+## 5. Version History
 
-- **v1.0.0** (2026-08-17): Initial Microsoft Edge compatible production release featuring side panel UI, copy auto-capture, targeted field picker, smart form inspector, context menu integration, and local storage management.
+- **v1.0.0** (2026-08-17): Initial Microsoft Edge compatible release featuring Manifest V3 i18n multilingual support (`_locales`), side panel UI, copy auto-capture, targeted field picker, smart form inspector, context menu integration, and local storage management.

@@ -4,8 +4,8 @@
     "description": "The title of the extension in Spanish"
   },
   "extension_description": {
-    "message": "Recopile automáticamente fragmentos de texto copiados, administre datos de contacto personales y complete formularios web fácilmente desde la barra lateral de Microsoft Edge.",
-    "description": "The description of the extension in Spanish"
+    "message": "Guarde fragmentos de texto copiados, administre datos de contacto y complete formularios web fácilmente.",
+    "description": "Short description in Spanish (max 132 chars)"
   },
   "action_title": {
     "message": "Abrir barra lateral de ClipFill",

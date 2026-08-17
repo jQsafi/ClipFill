@@ -4,8 +4,8 @@
     "description": "The title of the extension in Japanese"
   },
   "extension_description": {
-    "message": "コピーしたテキストスニペットを自動収集し、個人の連絡先情報を管理して、Microsoft EdgeサイドバーからWebフォームを簡単に自動入力します。",
-    "description": "The description of the extension in Japanese"
+    "message": "コピーしたテキストを自動収集し、個人の連絡先を管理してWebフォームを簡単に自動入力します。",
+    "description": "Short description in Japanese (max 132 chars)"
   },
   "action_title": {
     "message": "ClipFillサイドバーを開く",

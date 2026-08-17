@@ -4,8 +4,8 @@
     "description": "The title of the extension"
   },
   "extension_description": {
-    "message": "Automatically collect copied text snippets, manage personal contact info (Name, Email, Phone, Address), and easily fill out web forms from a customizable sidebar in Microsoft Edge.",
-    "description": "The description of the extension"
+    "message": "Collect copied text snippets, manage personal contact info, and auto-fill web forms easily from a browser side panel.",
+    "description": "Short description of the extension (max 132 chars)"
   },
   "action_title": {
     "message": "Open ClipFill Sidebar",

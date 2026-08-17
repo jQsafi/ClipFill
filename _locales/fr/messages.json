@@ -4,8 +4,8 @@
     "description": "The title of the extension in French"
   },
   "extension_description": {
-    "message": "Collectez automatiquement les extraits de texte copiés, gérez les coordonnées personnelles et remplissez facilement les formulaires web à partir de la barre latérale de Microsoft Edge.",
-    "description": "The description of the extension in French"
+    "message": "Collectez des extraits de texte, gérez vos coordonnées et remplissez facilement les formulaires web.",
+    "description": "Short description in French (max 132 chars)"
   },
   "action_title": {
     "message": "Ouvrir la barre latérale ClipFill",

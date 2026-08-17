@@ -4,8 +4,8 @@
     "description": "The title of the extension in German"
   },
   "extension_description": {
-    "message": "Kopierte Textausschnitte automatisch sammeln, persönliche Kontaktdaten verwalten und Webformulare einfach über die Microsoft Edge-Seitenleiste ausfüllen.",
-    "description": "The description of the extension in German"
+    "message": "Kopierte Textausschnitte sammeln, Kontaktdaten verwalten und Webformulare einfach über die Seitenleiste ausfüllen.",
+    "description": "Short description in German (max 132 chars)"
   },
   "action_title": {
     "message": "ClipFill-Seitenleiste öffnen",

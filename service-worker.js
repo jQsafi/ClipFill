@@ -3,8 +3,10 @@
 // Initialize side panel behavior and context menus on install
 chrome.runtime.onInstalled.addListener(async () => {
   try {
-    // Enable opening the side panel by clicking the action icon
-    await chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+    // Enable opening the side panel by clicking the action icon (Edge 114+ / Chrome 114+)
+    if (chrome.sidePanel && typeof chrome.sidePanel.setPanelBehavior === 'function') {
+      await chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+    }
   } catch (err) {
     console.error('Error setting panel behavior:', err);
   }

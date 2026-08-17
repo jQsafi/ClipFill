@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "ClipFill - スマートクリップボード＆フォーム自動入力",
+    "description": "The title of the extension in Japanese"
+  },
+  "extension_description": {
+    "message": "コピーしたテキストスニペットを自動収集し、個人の連絡先情報を管理して、Microsoft EdgeサイドバーからWebフォームを簡単に自動入力します。",
+    "description": "The description of the extension in Japanese"
+  },
+  "action_title": {
+    "message": "ClipFillサイドバーを開く",
+    "description": "Action icon tooltip text in Japanese"
+  }
+}
